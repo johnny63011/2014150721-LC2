@@ -1,0 +1,64 @@
+﻿@model IEnumerable<CajeroAutomatico.Entities.Entities.Cuenta>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table  table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Cliente.nomcliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TipoCuenta.desTipoCuenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numeroCuenta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numTarjeta)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.pin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.saldoDisponible)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Cliente.nomcliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TipoCuenta.desTipoCuenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numeroCuenta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numTarjeta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.pin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.saldoDisponible)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.cuentaId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.cuentaId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.cuentaId })
+        </td>
+    </tr>
+}
+
+</table>

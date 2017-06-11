@@ -1,0 +1,43 @@
+﻿@model CajeroAutomatico.Entities.Entities.DispensadorEfectivo
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DispensadorEfectivo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.EstadoDispensador.desEstDispensador)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EstadoDispensador.desEstDispensador)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ubicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ubicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dineroTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dineroTotal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.dispensadorEfectivoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

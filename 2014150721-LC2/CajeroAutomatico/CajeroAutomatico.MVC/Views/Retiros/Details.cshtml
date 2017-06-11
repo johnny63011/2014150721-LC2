@@ -1,0 +1,51 @@
+﻿@model CajeroAutomatico.Entities.Entities.Retiro
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Retiro</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Atm.desAtm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Atm.desAtm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DispensadorEfectivo.ubicacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DispensadorEfectivo.ubicacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaRetiro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaRetiro)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.montoRetiro)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.montoRetiro)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.retiroId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

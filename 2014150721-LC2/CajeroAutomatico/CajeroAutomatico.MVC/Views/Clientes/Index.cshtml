@@ -1,0 +1,62 @@
+﻿@model IEnumerable<CajeroAutomatico.Entities.Entities.Cliente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-hover ">
+
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nomcliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.correoCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.direcCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.telCliente)
+            </th>
+            <th></th>
+        </tr>
+
+    </thead>
+
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.nomcliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.correoCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.direcCliente)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.telCliente)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.clienteId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.clienteId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.clienteId })
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+
+</table>

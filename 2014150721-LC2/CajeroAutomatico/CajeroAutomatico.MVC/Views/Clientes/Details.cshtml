@@ -1,0 +1,51 @@
+﻿@model CajeroAutomatico.Entities.Entities.Cliente
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nomcliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nomcliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.correoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.correoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.direcCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.direcCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.telCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.telCliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.clienteId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

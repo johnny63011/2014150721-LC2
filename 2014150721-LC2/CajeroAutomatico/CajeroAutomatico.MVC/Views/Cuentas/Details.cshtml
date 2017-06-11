@@ -1,0 +1,67 @@
+﻿@model CajeroAutomatico.Entities.Entities.Cuenta
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Cuenta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cliente.nomcliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cliente.nomcliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoCuenta.desTipoCuenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipoCuenta.desTipoCuenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numeroCuenta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numeroCuenta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numTarjeta)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numTarjeta)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.pin)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.pin)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.saldoDisponible)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.saldoDisponible)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.cuentaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

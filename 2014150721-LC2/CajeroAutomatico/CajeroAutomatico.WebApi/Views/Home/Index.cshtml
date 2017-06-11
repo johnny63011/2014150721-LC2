@@ -1,0 +1,107 @@
+﻿<div class="jumbotron">
+    <h1>Peticion AJAX Listado Clientes</h1>
+</div>
+
+
+
+
+<table  id="idTableClientes" class="table table-bordered table-hover ">
+
+    <thead>
+        <tr>
+
+            <th>
+                id
+            </th>
+            <th>
+                Nombre de Cliente
+            </th>
+            <th>
+                Correo Cliente 
+            </th>
+            <th>
+              Direccion Cliente 
+            </th>
+            <th>
+             Teléfono   
+            </th>
+
+<!--
+            <th>
+               Editar
+            </th>
+
+            <th>
+               Detalle
+            </th>
+
+            <th>
+                Borrar
+            </th>
+    -->
+        </tr>
+
+    </thead>
+
+
+    <tbody>
+       
+    </tbody>
+
+
+</table>
+
+
+@section scripts {
+    
+    <script>
+        $(document).ready(function () {
+
+            $("#idTableClientes").DataTable({
+                "ajax": {
+                    "url": "/api/Clientes",
+                    "dataSrc": ""
+                },
+                columns: [
+                    { data: "clienteId" },
+                    { data: "nomcliente" },
+                    { data: "correoCliente" },
+                    { data: "direcCliente" },
+                    { data: "telCliente" },
+
+/*
+                    {
+                        data: "clienteId",
+                        render: function (data, type, cliente) {
+                            return "<a href='/Clientes/Edit/"+data+"' >Editar</a>";
+                        }
+
+                    },
+                    {
+                        data: "clienteId",
+                        render: function (data, type, cliente) {
+                            return "<a href='/Clientes/Details/" + data + "' >Detalle</a>";
+                        }
+
+                    },
+                    {
+                        data: "clienteId",
+                        render: function (data, type, cliente) {
+                            return "<a href='/Clientes/Delete/" + data + "' >Borrar</a>";
+                        }
+
+                    }*/
+
+                ]
+
+            });
+
+
+
+        });
+
+</script>
+    
+    }
+    
+   

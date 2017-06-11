@@ -1,0 +1,52 @@
+﻿@model IEnumerable<CajeroAutomatico.Entities.Entities.Retiro>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table  table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Atm.desAtm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DispensadorEfectivo.ubicacion)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fechaRetiro)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.montoRetiro)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Atm.desAtm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DispensadorEfectivo.ubicacion)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.fechaRetiro)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.montoRetiro)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.retiroId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.retiroId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.retiroId })
+        </td>
+    </tr>
+}
+
+</table>

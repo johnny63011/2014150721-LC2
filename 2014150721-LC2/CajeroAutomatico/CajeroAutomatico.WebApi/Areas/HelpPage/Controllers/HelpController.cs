@@ -56,8 +56,8 @@ namespace CajeroAutomatico.WebApi.Areas.HelpPage.Controllers
                     return View(modelDescription);
                 }
             }
-
             return View(ErrorViewName);
+          
         }
     }
 }
